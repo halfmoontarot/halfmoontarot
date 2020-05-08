@@ -1,0 +1,20 @@
+.base {
+  padding: 10px 30px;
+  border: solid #1117A1 3px;
+}
+
+.default {
+  background-color:  white;
+  box-shadow: 5px 5px 0px -1px #1117A1;
+}
+
+.hovered {
+  background-color:  #3FFFE8;
+  box-shadow: 5px 5px 0px -1px #1117A1;
+}
+
+.clicked {
+  color: white;
+  background-color:  #1117A1;
+  box-shadow: 5px 5px 0px -1px black;
+}

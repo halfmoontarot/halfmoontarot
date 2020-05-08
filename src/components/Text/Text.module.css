@@ -1,0 +1,19 @@
+.base {
+  color: black;
+}
+
+.body {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.nav {
+  font-size: 16px;
+}
+
+.callToAction {
+  font-size: 18px;
+}
