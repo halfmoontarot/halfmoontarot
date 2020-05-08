@@ -1,19 +1,24 @@
 .base {
   color: black;
+  white-space: pre-line;
 }
 
 .body {
   font-size: 18px;
+  white-space: pre-line;
 }
 
 .title {
   font-size: 50px;
+  white-space: pre-line;
 }
 
 .nav {
   font-size: 16px;
+  white-space: pre-line;
 }
 
 .callToAction {
   font-size: 18px;
+  white-space: pre-line;
 }
