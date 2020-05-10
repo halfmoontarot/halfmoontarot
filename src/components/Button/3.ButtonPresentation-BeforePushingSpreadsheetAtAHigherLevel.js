@@ -1,13 +1,7 @@
 import React from 'react'
+import styles from './ButtonPresentation.module.css'
 
-// We started with one Button component, and separated its behaviour from its presentation in case a 
-// component with a different html presentation needed the same behaviour. 
-// Now, what if another component with a similar html presentation needed a different css styling?
-// So we're now pushing the stylesheet up and passing it to the ButtonPresentation, so that it can be
-// changed. Now the <Button> is going to simply call the behaviour, call the presentation, and call the 
-// styling and combine them.
-
-export default function ButtonPresentation({children, isHovered, isPressed, isFocused, onMouseDown, onMouseUp, onMouseLeave, onMouseEnter, styles}) {
+export default function ButtonPresentation({children, isHovered, isPressed, isFocused, onMouseDown, onMouseUp, onMouseLeave, onMouseEnter}) {
   return(
     <button 
       className={`${styles.base} 

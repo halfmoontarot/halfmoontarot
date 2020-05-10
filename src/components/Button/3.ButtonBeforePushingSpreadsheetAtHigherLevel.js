@@ -1,7 +1,6 @@
 import React from 'react'
 import ButtonPresentation from './ButtonPresentation'
 import useButtonBehaviour from '../../behaviours/ButtonBehaviour'
-import styles from './ButtonPresentation.module.css'
 
 export default function Button({children, onClick}) {
 
@@ -28,7 +27,6 @@ export default function Button({children, onClick}) {
       onMouseEnter={onMouseEnter}
       onFocus={onFocus}
       onBlur={onBlur}
-      styles={styles}
     >{children}</ButtonPresentation>
   )
 }

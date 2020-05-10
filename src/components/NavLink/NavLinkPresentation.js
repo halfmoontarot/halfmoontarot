@@ -7,7 +7,7 @@ import React from 'react'
 // changed. Now the <Button> is going to simply call the behaviour, call the presentation, and call the 
 // styling and combine them.
 
-export default function ButtonPresentation({children, isHovered, isPressed, isFocused, onMouseDown, onMouseUp, onMouseLeave, onMouseEnter, styles}) {
+export default function ButtonPresentation({children, isCurrent, isHovered, isPressed, isFocused, onMouseDown, onMouseUp, onMouseLeave, onMouseEnter, styles}) {
   return(
     <button 
       className={`${styles.base} 
@@ -15,12 +15,20 @@ export default function ButtonPresentation({children, isHovered, isPressed, isFo
       ${isHovered ? styles.hovered : ''} 
       ${isPressed ? styles.clicked : ''} 
       ${isFocused ? styles.focused : ''}
+      ${isCurrent ? styles.current : ''}
       `}
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseLeave}
       onMouseEnter={onMouseEnter}
       >{children}
+      <div className={`${styles.rectangleBase} 
+        ${!isHovered && !isPressed ? styles.rectangleDefault : ''} 
+        ${isHovered ? styles.rectangleHovered : ''} 
+        ${isPressed ? styles.rectangleClicked : ''} 
+        ${isFocused ? styles.rectangleFocused : ''}
+        ${isCurrent ? styles.rectangleCurrent : ''}
+      `}></div>
     </button>
   )
 }

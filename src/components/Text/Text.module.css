@@ -6,19 +6,23 @@
 .body {
   font-size: 18px;
   white-space: pre-line;
+  font-family: "Mate-Regular";
 }
 
 .title {
   font-size: 50px;
   white-space: pre-line;
+  font-family: "AveriaSerifLibre-Regular";
 }
 
 .nav {
   font-size: 16px;
   white-space: pre-line;
+  font-family: "AveriaSerifLibre-Bold";
 }
 
 .callToAction {
   font-size: 18px;
   white-space: pre-line;
+  font-family: "AveriaSerifLibre-Regular";
 }

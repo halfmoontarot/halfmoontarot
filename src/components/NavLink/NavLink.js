@@ -1,9 +1,9 @@
 import React from 'react'
-import ButtonPresentation from './ButtonPresentation'
+import NavLinkPresentation from './NavLinkPresentation'
 import useButtonBehaviour from '../../behaviours/ButtonBehaviour'
-import styles from './ButtonPresentation.module.css'
+import styles from './NavLinkPresentation.module.css'
 
-export default function Button({children, onClick}) {
+export default function NavLink({children, onClick}) {
 
   const {
     isHovered, 
@@ -18,7 +18,7 @@ export default function Button({children, onClick}) {
   } = useButtonBehaviour({onClick})
 
   return(
-    <ButtonPresentation
+    <NavLinkPresentation
       isHovered={isHovered}
       isPressed={isPressed}
       isFocused={isFocused}
@@ -29,6 +29,6 @@ export default function Button({children, onClick}) {
       onFocus={onFocus}
       onBlur={onBlur}
       styles={styles}
-    >{children}</ButtonPresentation>
+    >{children}</NavLinkPresentation>
   )
 }

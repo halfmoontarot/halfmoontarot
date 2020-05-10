@@ -1,0 +1,26 @@
+/* How to add fonts to a project:
+https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-app-based-projects */
+
+@font-face {
+  font-family: 'AveriaSerifLibre-Bold';
+  src: local('AveriaSerifLibre-Bold'), url(../fonts/AveriaSerifLibre-Bold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'AveriaSerifLibre-Regular';
+  src: local('AveriaSerifLibre-Regular'), url(../fonts/AveriaSerifLibre-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'AveriaSerifLibre-Light';
+  src: local('AveriaSerifLibre-Light'), url(../fonts/AveriaSerifLibre-Light.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Mate-Regular';
+  src: local('Mate-Regular'), url(../fonts/Mate-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Mate-Italic';
+  src: local('Mate-Italic'), url(../fonts/Mate-Italic.ttf) format('ttf');
+}
