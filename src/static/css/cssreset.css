@@ -50,4 +50,9 @@ table {
 button {
 	border: none;
 	padding: 0;
+	focus: none;
+}
+
+button:focus {
+	outline: none;
 }

@@ -1,6 +1,7 @@
 .base {
   position: relative;
   background: none;
+  padding-bottom: 20px;
 }
 
 .default {
@@ -10,17 +11,14 @@
 
 .current {
   border-bottom: 4px solid #1117A1;
-  padding-bottom: 3px;
 }
 
 .hovered {
   border-bottom: 4px solid #1117A1;
-  padding-bottom: 3px;
 }
 
 .clicked {
   border-bottom: 4px solid #1117A1;
-  padding-bottom: 3px;
 }
 
 
