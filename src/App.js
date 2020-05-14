@@ -1,4 +1,5 @@
 import React, {useState, useCallback, useEffect} from 'react';
+import { HashRouter, Link, Route, Switch  } from "react-router-dom";
 import './static/css/cssreset.css'
 import './static/css/fonts.css'
 import styles from './App.module.css';
@@ -40,23 +41,42 @@ export default function App() {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.title}>
-        <Text variant='title'>Half Moon <br/> Tarot</Text>
+    <HashRouter>
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <Text variant='title'>Half Moon <br/> Tarot</Text>
+        </div>
+        <div className={styles.callToAction}>
+          <Button onClick={onClickCallToAction}><Text variant='callToAction'>Book a Reading</Text></Button>
+        </div>
+        <div className={styles.navbar}>
+          <Navbar pages={pagesData} onClick={onClickNavLinks}></Navbar>
+        </div>
+        <div className={styles.body}>
+        <Switch>
+          <Route exact path={["/", "/philosophy"]} c>
+            <Text variant='body'>{data.philosophy}</Text>
+          </Route>
+          <Route path="/readings">
+            <Text variant='body'>{data.readings}</Text>
+          </Route>
+          <Route path="/sessions">
+            <Text variant='body'>{data.sessions}</Text>
+          </Route>
+          <Route path="/confidentiality">
+            <Text variant='body'>{data.confidentiality}</Text>
+          </Route>
+          <Route path="/contact">
+            <Text variant='body'>{data.contact}</Text>
+          </Route>
+        </Switch>
+        </div>
       </div>
-      <div className={styles.callToAction}>
-        <Button onClick={onClickCallToAction}><Text variant='callToAction'>Book a Reading</Text></Button>
-      </div>
-      <div className={styles.navbar}>
-        <Navbar pages={pagesData} onClick={onClickNavLinks}></Navbar>
-      </div>
-      <div className={styles.body}>
-        <Text variant='body'>{data.philosophy}</Text>
-      </div>
-    </div>
+    </HashRouter>
   )
 }
 
+//<Text variant='body'>{data.philosophy}</Text>
 
 //////////////////////
 // Create an iframe:

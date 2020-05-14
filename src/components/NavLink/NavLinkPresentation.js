@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import Text from '../Text/Text'
 
 // We started with one Button component, and separated its behaviour from its presentation in case a 
 // component with a different html presentation needed the same behaviour. 
@@ -7,7 +9,7 @@ import React from 'react'
 // changed. Now the <Button> is going to simply call the behaviour, call the presentation, and call the 
 // styling and combine them.
 
-export default function ButtonPresentation({children, isCurrent, isHovered, isPressed, isFocused, onMouseDown, onMouseUp, onMouseLeave, onMouseEnter, styles}) {
+export default function NavLinkPresentation({children, isCurrent, isHovered, isPressed, isFocused, onMouseDown, onMouseUp, onMouseLeave, onMouseEnter, styles}) {
   return(
     <button 
       className={`${styles.base} 
