@@ -1,0 +1,19 @@
+.root{
+  background-color: blanchedalmond;
+  margin: 30px;
+  padding: 30px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height:100%;
+}
