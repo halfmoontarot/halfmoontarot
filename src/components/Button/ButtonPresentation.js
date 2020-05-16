@@ -8,8 +8,7 @@ import React from 'react'
 // styling and combine them.
 
 export default function ButtonPresentation({children, isHovered, isPressed, isFocused, onMouseDown, onMouseUp, onMouseLeave, onMouseEnter, styles}) {
-  return(
-    <button 
+    return (<button 
       className={`${styles.base} 
       ${!isHovered && !isPressed ? styles.default : ''} 
       ${isHovered ? styles.hovered : ''} 

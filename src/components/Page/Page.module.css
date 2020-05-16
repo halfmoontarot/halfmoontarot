@@ -1,0 +1,17 @@
+.pageBreak {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.email {
+  color: #1117A1;
+  border-bottom: 4px solid #1117A1;
+  cursor: pointer;
+  width: fit-content;
+  padding-top: 10px;
+}
+
+.email:hover {
+  color: rgb(133, 122, 122);
+}

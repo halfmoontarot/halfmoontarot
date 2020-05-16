@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
+import { HashRouter } from 'react-router-dom';
 
 export default {
   component: Navbar,
@@ -29,4 +30,6 @@ const pagesData = [
   },
 ]
 
-export const Default = () => <Navbar pages={pagesData}></Navbar>;
+export const Default = () => <HashRouter><Navbar pages={pagesData}></Navbar></HashRouter>;
+
+export const OpenedSmallScreen = () => <HashRouter><Navbar isOpened pages={pagesData}></Navbar></HashRouter>;

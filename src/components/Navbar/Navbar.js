@@ -2,8 +2,9 @@ import React from 'react'
 import NavbarPresentation from './NavbarPresentation'
 import styles from './Navbar.module.css'
 
-export default function Navbar ({pages, onClick}) {
+export default function Navbar ({pages, onClick, isOpened, ...props}) {
+  console.log("props", props)
   return (
-    <NavbarPresentation styles={styles} pages={pages} onClick={onClick}></NavbarPresentation>
+    <NavbarPresentation isOpened={isOpened} styles={styles} pages={pages} onClick={onClick}></NavbarPresentation>
   )
 }

@@ -6,8 +6,9 @@
 .body {
   font-size: 18px;
   white-space: pre-line;
-  font-family: "Mate-Regular";
+  font-family: "Abel-Regular";
   text-align: justify;
+  line-height: 22px;
 }
 
 .title {
@@ -21,6 +22,7 @@
   font-size: 16px;
   white-space: pre-line;
   font-family: "AveriaSerifLibre-Bold";
+  color: #1117A1;
 }
 
 .callToAction {

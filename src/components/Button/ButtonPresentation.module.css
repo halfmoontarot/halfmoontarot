@@ -1,6 +1,7 @@
 .base {
   padding: 10px 30px;
   border: solid #1117A1 3px;
+  cursor: pointer;
 }
 
 .default {

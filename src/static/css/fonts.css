@@ -24,3 +24,8 @@ https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-ap
   font-family: 'Mate-Italic';
   src: local('Mate-Italic'), url(../fonts/Mate-Italic.ttf) format('ttf');
 }
+
+@font-face {
+  font-family: 'Abel-Regular';
+  src: local('Abel-Regular'), url(../fonts/Abel-Regular.ttf) format('ttf');
+}

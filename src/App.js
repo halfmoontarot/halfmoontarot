@@ -1,12 +1,16 @@
 import React, {useState, useCallback, useEffect} from 'react';
-import { HashRouter, Link, Route, Switch  } from "react-router-dom";
+import { HashRouter, Route, Switch  } from "react-router-dom";
 import './static/css/cssreset.css'
+import './static/css/variables.css'
 import './static/css/fonts.css'
 import styles from './App.module.css';
 import Button from './components/Button/Button';
 import Text from './components/Text/Text'
 import Navbar from './components/Navbar/Navbar'
+import Page from './components/Page'
 import data from './static/data.json'
+import { ReactComponent as Logo } from './static/images/HalfMoonLogo_vfinal.svg'
+import { ReactComponent as MenuIcon } from './static/images/menu_blue_vfinal.svg'
 
 const pagesData = [
   { 
@@ -22,52 +26,62 @@ const pagesData = [
     url: "/sessions",
   },
   { 
-    title: "Confidentiality",
-    url: "/confidentiality",
-  },
-  { 
     title: "Contact",
     url: "/contact",
   },
 ]
 
 export default function App() {
+  const [isOpened, setIsOpened] = useState(false)
   function onClickCallToAction() {
     window.open("https://halfmoontarotreadings.simplybook.it/v2/#book/count/1/provider/1");
   }
 
   function onClickNavLinks(pageUrl) {
+    setIsOpened(false)
     console.log("pageUrl", pageUrl)
+  }
+
+  function onClickMenu() {
+    setIsOpened(true)
+    console.log("open")
   }
 
   return (
     <HashRouter>
       <div className={styles.container}>
+        <div className={styles.header}>
+          <div className={styles.logoSmall}>
+            <Logo title={"Half Moon Tarot Logo"} width={"65"} height={"65"}></Logo>
+          </div>
+          <div className={styles.menuIcon}>
+            {/* <MenuIcon title={"Half Moon Tarot Logo"} width={"65"} height={"65"}></MenuIcon> */}
+            <Button onClick={onClickMenu} isIcon><MenuIcon width={"65"} height={"65"}></MenuIcon></Button>
+          </div>
+        </div>
+        <div className={styles.logoLarge}>
+          <Logo title={"Half Moon Tarot Logo"} width={"150"} height={"150"}></Logo>
+        </div>
         <div className={styles.title}>
           <Text variant='title'>Half Moon <br/> Tarot</Text>
         </div>
         <div className={styles.callToAction}>
           <Button onClick={onClickCallToAction}><Text variant='callToAction'>Book a Reading</Text></Button>
         </div>
-        <div className={styles.navbar}>
-          <Navbar pages={pagesData} onClick={onClickNavLinks}></Navbar>
-        </div>
+        <Navbar isOpened={isOpened} pages={pagesData} onClick={onClickNavLinks}></Navbar>
         <div className={styles.body}>
         <Switch>
-          <Route exact path={["/", "/philosophy"]} c>
-            <Text variant='body'>{data.philosophy}</Text>
+          <Route exact path={["/", "/philosophy"]}>
+            <Page pageType={"isPhilosophy"}>{data.philosophy}</Page>
           </Route>
           <Route path="/readings">
-            <Text variant='body'>{data.readings}</Text>
+            <Page pageType={"isReadings"}>{data.readings}</Page>
           </Route>
           <Route path="/sessions">
-            <Text variant='body'>{data.sessions}</Text>
-          </Route>
-          <Route path="/confidentiality">
-            <Text variant='body'>{data.confidentiality}</Text>
+            <Page pageType={"isSessions"}>{data.sessions}</Page>
           </Route>
           <Route path="/contact">
-            <Text variant='body'>{data.contact}</Text>
+            <Page pageType={"isContact"}>{data.contact}</Page>
           </Route>
         </Switch>
         </div>
