@@ -32,6 +32,20 @@ const pagesData = [
   },
 ]
 
+const throttle = (func, delay) => {
+  let inProgress = false;
+  return (...args) => {
+    if (inProgress) {
+      return;
+    }
+    inProgress = true;
+    func(...args);
+    setTimeout(() => {
+      inProgress = false;
+    }, delay);
+  }
+}
+
 export default function App() {
   const [currentView, setCurrentView ] = useState('/')
   useEffect(() => {
@@ -41,6 +55,16 @@ export default function App() {
   }, [window.location.hash])
 
   const [isOpened, setIsOpened] = useState(false)
+
+  useEffect(() => {
+    const handleResize = throttle(() => {
+      setIsOpened(false);
+    }, 1000);
+  
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   function onClickCallToAction() {
     window.open("https://halfmoontarotreadings.simplybook.it/v2/#book/count/1/provider/1");
   }
