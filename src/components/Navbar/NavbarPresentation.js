@@ -12,9 +12,7 @@ export default function NavbarPresentation ({styles, pages, onClick, isOpened}) 
           return (
             <li>
               <NavLink onClick={() => onClick(page.url)}>
-                <Link to={page.url}>
-                  <Text variant='nav'>{page.title}</Text>
-                </Link>
+                <Text variant='nav'>{page.title}</Text>
               </NavLink>
             </li>
           )

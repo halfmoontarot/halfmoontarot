@@ -6,8 +6,6 @@ import defaultStyles from './ButtonPresentation.module.css'
 
 export default function Button({children, onClick, isIcon}) {
 
-  console.log("isIcon", isIcon)
-
   const {
     isHovered, 
     isPressed, 

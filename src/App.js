@@ -1,4 +1,5 @@
 import React, {useState, useCallback, useEffect} from 'react';
+import ReactDOM from 'react-dom'
 import { HashRouter, Route, Switch  } from "react-router-dom";
 import './static/css/cssreset.css'
 import './static/css/variables.css'
@@ -32,19 +33,39 @@ const pagesData = [
 ]
 
 export default function App() {
+  const [currentView, setCurrentView ] = useState('/')
+  useEffect(() => {
+    // render page is sufficient to navigate within the app, but this hook is necessary when user directly pastes url in browser
+    const location = window.location.hash.split('#')
+    setCurrentView(location[1])
+  }, [window.location.hash])
+
   const [isOpened, setIsOpened] = useState(false)
   function onClickCallToAction() {
     window.open("https://halfmoontarotreadings.simplybook.it/v2/#book/count/1/provider/1");
   }
 
   function onClickNavLinks(pageUrl) {
+    window.location.hash = pageUrl; // updates the url
+    setCurrentView(pageUrl)
     setIsOpened(false)
-    console.log("pageUrl", pageUrl)
+  }
+
+  function onClickLogo() {
+    window.location.hash = "/"; // updates the url
+    setCurrentView("/")
   }
 
   function onClickMenu() {
     setIsOpened(true)
-    console.log("open")
+  }
+
+  let renderPage = {
+    "/" : <Page pageType={"isPhilosophy"}>{data.philosophy}</Page>,
+    "/philosophy" : <Page pageType={"isPhilosophy"}>{data.philosophy}</Page>,
+    "/readings": <Page pageType={"isReadings"}>{data.readings}</Page>,
+    "/sessions": <Page pageType={"isSessions"}>{data.sessions}</Page>,
+    "/contact": <Page pageType={"isContact"}>{data.contact}</Page>,
   }
 
   return (
@@ -52,10 +73,10 @@ export default function App() {
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.logoSmall}>
-            <Logo title={"Half Moon Tarot Logo"} width={"65"} height={"65"}></Logo>
+            {/* <Logo title={"Half Moon Tarot Logo"} width={"65"} height={"65"}></Logo> */}
+            <Button onClick={onClickLogo} isIcon><Logo width={"65"} height={"65"}></Logo></Button>
           </div>
           <div className={styles.menuIcon}>
-            {/* <MenuIcon title={"Half Moon Tarot Logo"} width={"65"} height={"65"}></MenuIcon> */}
             <Button onClick={onClickMenu} isIcon><MenuIcon width={"65"} height={"65"}></MenuIcon></Button>
           </div>
         </div>
@@ -70,20 +91,7 @@ export default function App() {
         </div>
         <Navbar isOpened={isOpened} pages={pagesData} onClick={onClickNavLinks}></Navbar>
         <div className={styles.body}>
-        <Switch>
-          <Route exact path={["/", "/philosophy"]}>
-            <Page pageType={"isPhilosophy"}>{data.philosophy}</Page>
-          </Route>
-          <Route path="/readings">
-            <Page pageType={"isReadings"}>{data.readings}</Page>
-          </Route>
-          <Route path="/sessions">
-            <Page pageType={"isSessions"}>{data.sessions}</Page>
-          </Route>
-          <Route path="/contact">
-            <Page pageType={"isContact"}>{data.contact}</Page>
-          </Route>
-        </Switch>
+          {renderPage[currentView]}
         </div>
       </div>
     </HashRouter>

@@ -1,5 +1,41 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Routing 
+
+Using github pages prevents from using any routing which uses the HTML5 history API.
+React-router uses this API with BrowserRouter but not with the older HashRouter.
+However their use of Link wich doesn't let the user easily assign urls programmatically turned out to be a problem (and has been multiple times in other apps).
+I ended up coding it manually (extremely simple!), using https://reactarmory.com/answers/push-state-vs-hash-based-routing as a reference.
+
+## Hosting
+
+Hosted on github pages. Follow this to deploy: https://create-react-app.dev/docs/deployment/
+
+## CSS
+
+I am using CSS modules + variables with vanilla css :root
+
+## App Structure
+
+In MyComponent
+`
+import styles from './myComponentStyles'
+
+function MyComponent() {
+  const {props} = useMyComponentBehaviour
+  <MyComponentPresentation styles={styles} props={props}/>
+}
+`
+
+## Storybook
+
+Using storybook to unit test at the design level
+
+## React-testing library
+
+Not used here but would if I was implementing tests
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -36,33 +72,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
