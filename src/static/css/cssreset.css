@@ -49,6 +49,9 @@ table {
 
 button {
 	focus: none;
+	padding: 0;
+	background-color: white;
+	border-width: 0;
 }
 
 button:focus {
