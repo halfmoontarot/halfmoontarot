@@ -14,14 +14,17 @@
   border-bottom: 4px solid #1117A1;
 }
 
-.hovered {
-  border-bottom: 4px solid #1117A1;
+@media only screen and (max-width: 600px) {
+  .hovered {
+    border-bottom: none;
+  }
 }
 
-.clicked {
-  border-bottom: 4px solid #1117A1;
+@media only screen and (min-width: 601px) {
+  .hovered {
+    border-bottom: 4px solid #1117A1;
+  }
 }
-
 
 .rectangleBase {
 
