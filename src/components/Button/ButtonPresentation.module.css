@@ -1,6 +1,7 @@
 .base {
   padding: 10px 30px;
   border: solid #1117A1 3px;
+  box-shadow: 5px 5px 0px -1px black;
   cursor: pointer;
 }
 
@@ -10,12 +11,12 @@
 }
 
 .hovered {
-  background-color:  #3FFFE8;
+  background-color:  #ffefd3;
   box-shadow: 5px 5px 0px -1px #1117A1;
 }
 
-.clicked {
+/* .clicked {
   color: white;
   background-color:  #1117A1;
   box-shadow: 5px 5px 0px -1px black;
-}
+} */

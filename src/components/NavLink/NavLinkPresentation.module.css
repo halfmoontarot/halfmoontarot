@@ -35,7 +35,7 @@
   width: 95%;
   height: 30px;
   margin-left: 10px;
-  background-color:  #3FFFE8;
+  background-color:  #ffefd3;
   position: absolute;
   top: -5px;
   left: 0;
@@ -46,13 +46,14 @@
 
 }
 
-.rectangleClicked {
+/* .rectangleClicked {
   width: 95%;
   height: 30px;
   margin-left: 10px;
-  background-color:  #3FFFE8;
+  background-color:  #ffefd3;
   position: absolute;
   top: -5px;
   left: 0;
   z-index: -1;
-}
+} */
+

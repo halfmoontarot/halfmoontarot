@@ -4,12 +4,12 @@ import NavLinkPresentation from './NavLinkPresentation'
 import useButtonBehaviour from '../../behaviours/ButtonBehaviour'
 import styles from './NavLinkPresentation.module.css'
 
-export default function NavLink({children, onClick}) {
+export default function NavLink({children, onClick, isCurrent}) {
 
   const {
     isHovered, 
     isPressed, 
-    isFocused, 
+    isFocused,
     onMouseDown, 
     onMouseUp, 
     onMouseLeave, 
@@ -23,6 +23,7 @@ export default function NavLink({children, onClick}) {
       isHovered={isHovered}
       isPressed={isPressed}
       isFocused={isFocused}
+      isCurrent={isCurrent}
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseLeave}
