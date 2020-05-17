@@ -13,8 +13,8 @@ https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-ap
 @font-face {
   font-family: 'AveriaSerifLibre-Regular';
   src: url(../fonts/AveriaSerifLibre-Regular.ttf) format('ttf'),
-        url('averiaseriflibre-regular-webfont.woff2') format('woff2'),
-       url('averiaseriflibre-regular-webfont.woff') format('woff');
+        url('../fonts/averiaseriflibre-regular-webfont.woff2') format('woff2'),
+       url('../fonts/averiaseriflibre-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,8 +22,8 @@ https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-ap
 @font-face {
   font-family: 'AveriaSerifLibre-Light';
   src: url(../fonts/AveriaSerifLibre-Light.ttf) format('ttf'),
-      url('averiaseriflibre-light-webfont.woff2') format('woff2'),
-       url('averiaseriflibre-light-webfont.woff') format('woff');
+      url('../fonts/averiaseriflibre-light-webfont.woff2') format('woff2'),
+       url('../fonts/averiaseriflibre-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,8 +31,8 @@ https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-ap
 @font-face {
   font-family: 'AveriaSerifLibre-Bold';
   src: url(../fonts/AveriaSerifLibre-Bold.ttf) format('ttf'),
-      url('averiaseriflibre-bold-webfont.woff2') format('woff2'),
-       url('averiaseriflibre-bold-webfont.woff') format('woff');
+      url('../fonts/averiaseriflibre-bold-webfont.woff2') format('woff2'),
+       url('../fonts/averiaseriflibre-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
