@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.85efdeaa.chunk.css",
+    "main.css": "/static/css/main.d1fe4cb2.chunk.css",
     "main.js": "/static/js/main.d8540019.chunk.js",
     "main.js.map": "/static/js/main.d8540019.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.68272e43.js",
@@ -8,9 +8,9 @@
     "static/js/2.598b0efb.chunk.js": "/static/js/2.598b0efb.chunk.js",
     "static/js/2.598b0efb.chunk.js.map": "/static/js/2.598b0efb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.9d0c5761662a118409e4ae37e602c9fd.js": "/precache-manifest.9d0c5761662a118409e4ae37e602c9fd.js",
+    "precache-manifest.a56d7b7d02c73bc1c8916c993e90fc41.js": "/precache-manifest.a56d7b7d02c73bc1c8916c993e90fc41.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.85efdeaa.chunk.css.map": "/static/css/main.85efdeaa.chunk.css.map",
+    "static/css/main.d1fe4cb2.chunk.css.map": "/static/css/main.d1fe4cb2.chunk.css.map",
     "static/js/2.598b0efb.chunk.js.LICENSE.txt": "/static/js/2.598b0efb.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/static/media/averiaseriflibre-regular-webfont.56f5915a.woff2",
     "static/media/HalfMoonLogo_vfinal.7ee09437.svg": "/static/media/HalfMoonLogo_vfinal.7ee09437.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.68272e43.js",
     "static/js/2.598b0efb.chunk.js",
-    "static/css/main.85efdeaa.chunk.css",
+    "static/css/main.d1fe4cb2.chunk.css",
     "static/js/main.d8540019.chunk.js"
   ]
 }
