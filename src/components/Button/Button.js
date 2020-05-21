@@ -4,6 +4,10 @@ import useButtonBehaviour from '../../behaviours/ButtonBehaviour'
 import iconStyles from './ButtonIconPresentation.module.css'
 import defaultStyles from './ButtonPresentation.module.css'
 
+// unsure of what to do: ButtonIcon vs Navlink
+// different styles > 2 presentations in the same folder?
+// different props, even small difference like isCurrent > 2 folders?
+
 export default function Button({children, onClick, isIcon}) {
 
   const {

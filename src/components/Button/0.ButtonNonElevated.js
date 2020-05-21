@@ -11,8 +11,9 @@ import styles from './ButtonPresentation.module.css'
 // different page. To be able to change what happens depending on the purpose of the button, we need to
 // elevate the function onMouseDown to a component above, from where we can give it different instructions.
 // b) Encapsulating the functions in the component also means it is not possible to test those functions  
-// and their impact (either visually with storybook or as part of unit testes), because those require to 
-// receive these functions as props, and therefore all the functions need to be elevated.
+// and their impact (either visually with storybook or as part of unit tests), because those require to 
+// receive these functions as props, and therefore all the functions need to be elevated. In the case of storybook, 
+// we want to elevate the states, and in the case of unit test, the functions (and potentially states?)
 
 export default function Button({children}) {
   const [isHovered, setIsHovered] = useState(false)

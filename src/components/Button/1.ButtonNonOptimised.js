@@ -3,7 +3,7 @@ import ButtonPresentation from './ButtonPresentation'
 
 // 1. To elevate the functions, we take everything that is in return() and place it in a new ButtonPresentation
 // component, that we call in the return() of the Button component.
-// This now allows to test the Button.
+// This now allows to test the ButtonPresentation.
 // But this still doesn't fully solve our need for the component to be behaving differently depending
 // on where is is placed in the app when being clicked. Indeed to allow for this, we would need to 
 // elevate the whole onMouseDown() function in the component above Button. This would solve our problem, 

@@ -6,6 +6,8 @@ import ButtonPresentation from './ButtonPresentation'
 // To do so, we create a custom hook, which is nothing more than taking the logic and placing it in a 
 // function which name starts with "use", and which returns the state and functions as an object.
 // We then call this function in the Button component and destructure it.
+// We could split each action (click, hover, focus) in its own hook that we could call one after another,
+// which means various components could pick and choose between actions.
 
 function useButtonBehaviour({onClick}) {
   const [isHovered, setIsHovered] = useState(false)
