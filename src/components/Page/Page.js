@@ -20,7 +20,7 @@ export default function ({pageType, children}) {
     return (
       <React.Fragment>
         <div><Text variant='body'>{children}</Text></div>
-        <div className={styles.email}><a href="mailto: lo@notsetupyet.com"><Text variant='body'>Message Lo</Text></a></div>
+        <div className={styles.email}><a href="mailto: hello@halfmoontarot.com"><Text variant='body'>Message Lo</Text></a></div>
       </React.Fragment>
     )
   }
