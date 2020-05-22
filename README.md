@@ -9,7 +9,15 @@ I ended up coding it manually (extremely simple!), using https://reactarmory.com
 
 ## Hosting
 
-Hosted on github pages. Follow this to deploy: https://create-react-app.dev/docs/deployment/
+Hosted on github pages. 
+
+### `npm run deploy`
+Follow this to deploy: https://create-react-app.dev/docs/deployment/
+
+> Deploy on master branch
+> Keeop code on this-is-where-the-code-is branch
+
+!!!!! For some reason on deploy, sometimes this breaks github. The site will appear on github but not on the custom domain. Indeed in Settings > Custom domain, the name is erased. So you have to go there and rewrite the custom domain (halfmoontarot.com) in the input, save, and then it's back on the custom domain too/. GO figure.
 
 ## CSS
 
