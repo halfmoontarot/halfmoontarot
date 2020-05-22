@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.d1fe4cb2.chunk.css",
-    "main.js": "/static/js/main.4baed51a.chunk.js",
-    "main.js.map": "/static/js/main.4baed51a.chunk.js.map",
+    "main.js": "/static/js/main.f310936f.chunk.js",
+    "main.js.map": "/static/js/main.f310936f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.68272e43.js",
     "runtime-main.js.map": "/static/js/runtime-main.68272e43.js.map",
-    "static/js/2.83ab1994.chunk.js": "/static/js/2.83ab1994.chunk.js",
-    "static/js/2.83ab1994.chunk.js.map": "/static/js/2.83ab1994.chunk.js.map",
+    "static/js/2.598b0efb.chunk.js": "/static/js/2.598b0efb.chunk.js",
+    "static/js/2.598b0efb.chunk.js.map": "/static/js/2.598b0efb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.70c5c36937580c49abd8462bb3604e63.js": "/precache-manifest.70c5c36937580c49abd8462bb3604e63.js",
+    "precache-manifest.31ce47ac6d666bd6b893584a14bd63c8.js": "/precache-manifest.31ce47ac6d666bd6b893584a14bd63c8.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.d1fe4cb2.chunk.css.map": "/static/css/main.d1fe4cb2.chunk.css.map",
-    "static/js/2.83ab1994.chunk.js.LICENSE.txt": "/static/js/2.83ab1994.chunk.js.LICENSE.txt",
+    "static/js/2.598b0efb.chunk.js.LICENSE.txt": "/static/js/2.598b0efb.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/static/media/averiaseriflibre-regular-webfont.56f5915a.woff2",
     "static/media/HalfMoonLogo_vfinal.7ee09437.svg": "/static/media/HalfMoonLogo_vfinal.7ee09437.svg",
     "static/media/menu_blue_vfinal.a6699dcd.svg": "/static/media/menu_blue_vfinal.a6699dcd.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.68272e43.js",
-    "static/js/2.83ab1994.chunk.js",
+    "static/js/2.598b0efb.chunk.js",
     "static/css/main.d1fe4cb2.chunk.css",
-    "static/js/main.4baed51a.chunk.js"
+    "static/js/main.f310936f.chunk.js"
   ]
 }
