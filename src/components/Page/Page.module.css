@@ -15,3 +15,8 @@
 .email:hover {
   color: rgb(133, 122, 122);
 }
+
+.image {
+  padding-top: 30px;
+  width: 100%;
+}
